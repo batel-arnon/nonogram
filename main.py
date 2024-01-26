@@ -7,20 +7,22 @@ def print_hi(name):
 def get_input():
     w = int(input("enter the weight size: "))
     h = int(input("enter the height size: "))
-    b = Board(45, 35)
+    b = Board(w, h)
+    print("starting with rows: ")
     for i in range(w):
-        number = int(input("enter numbers  that describes the line, when done enter 999"))
+        number = int(input("enter numbers  that describes the line, when done enter 999: "))
         arr = []
         while number != 999:
             arr.append(number)
-            number = int(input("enter numbers  that describes the line, when done enter 999"))
+            number = int(input("enter numbers  that describes the line, when done enter 999: "))
         b.set_numbers(True, arr)
+    print("starting with the columns: ")
     for i in range(h):
-        number = int(input("enter numbers  that describes the line, when done enter 999"))
+        number = int(input("enter numbers  that describes the line, when done enter 999: "))
         arr = []
         while number != 999:
             arr.append(number)
-            number = int(input("enter numbers  that describes the line, when done enter 999"))
+            number = int(input("enter numbers  that describes the line, when done enter 999: "))
         b.set_numbers(False, arr)
     b.print_whats_we_have()
     b.draw_board()

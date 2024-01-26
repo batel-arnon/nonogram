@@ -94,15 +94,15 @@ class Board:
         while len(lines_to_work_on) > 0:
             line = self.get_best(lines_to_work_on)
             solve_line(line)
-            if line[0].row_number<0:
+            if line[0].row_number < 0:
                 for j in range(len(line[0].content)):
-                    self.allBoard[j][line[0].columns_number]=line[0].content[j]
+                    self.allBoard[j][line[0].columns_number] = line[0].content[j]
                 for j in range(len(rows)):
-                    rows[j].content[line[0].columns_number]=line[0].content[j]
+                    rows[j].content[line[0].columns_number] = line[0].content[j]
             else:
                 for j in range(len(columns)):
-                    columns[j].content[line[0].row_number]=line[0].content[j]
-            if not line[0].hasZeros():
+                    columns[j].content[line[0].row_number] = line[0].content[j]
+            if not line[0].has_zeros():
                 lines_to_work_on.remove(line[0])
             self.draw_board()
 
