@@ -4,9 +4,29 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def getInput():
-    return 12
-def getInput4():
+def get_input():
+    w = int(input("enter the weight size: "))
+    h = int(input("enter the height size: "))
+    b = Board(45, 35)
+    for i in range(w):
+        number = int(input("enter numbers  that describes the line, when done enter 999"))
+        arr = []
+        while number != 999:
+            arr.append(number)
+            number = int(input("enter numbers  that describes the line, when done enter 999"))
+        b.set_numbers(True, arr)
+    for i in range(h):
+        number = int(input("enter numbers  that describes the line, when done enter 999"))
+        arr = []
+        while number != 999:
+            arr.append(number)
+            number = int(input("enter numbers  that describes the line, when done enter 999"))
+        b.set_numbers(False, arr)
+    b.print_whats_we_have()
+    b.draw_board()
+    b.fill_board()
+    b.draw_board()
+def get_input4():
     b=Board(45,35)
     b.setNumbers(True,[1,8,34])
     b.setNumbers(True, [10,5,6,2])
@@ -95,7 +115,7 @@ def getInput4():
     b.fill_board()
     b.draw_board()
 
-def getInput2():
+def get_input2():
     b = Board(10,10)
     b.setNumbers(True,[2,1])
     b.setNumbers(True,[2,1])
@@ -124,7 +144,7 @@ def getInput2():
     b.fill_board()
     b.draw_board()
 
-def getInput3():
+def get_input3():
     b = Board(5,5)
     b.setNumbers(True, [5])
     b.setNumbers(True, [1,1])
@@ -144,7 +164,7 @@ def getInput3():
     b.draw_board()
 # Press the green button in the gutter to run the script.
 
-getInput2()
+get_input()
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
