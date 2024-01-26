@@ -1,4 +1,4 @@
-from Line import Line, grade, solve10Line
+from Line import Line, grade, solve_line
 
 class Board:
     lines = []
@@ -50,7 +50,7 @@ class Board:
         nums = []
         count = 0
         for i in range(0, self.hig):
-            if self.all[i][col_num] == ' ':
+            if self.allBoard[i][col_num] == ' ':
                 if count != 0:
                     nums.append(count)
                 count = 0
@@ -93,7 +93,7 @@ class Board:
             lines_to_work_on.append(l)
         while len(lines_to_work_on) > 0:
             line = self.get_best(lines_to_work_on)
-            solve10Line(line)
+            solve_line(line)
             if line[0].row_number<0:
                 for j in range(len(line[0].content)):
                     self.allBoard[j][line[0].columns_number]=line[0].content[j]
@@ -104,6 +104,6 @@ class Board:
                     columns[j].content[line[0].row_number]=line[0].content[j]
             if not line[0].hasZeros():
                 lines_to_work_on.remove(line[0])
-            self.drawBoard()
+            self.draw_board()
 
 #    arr.sort(key=grade)
