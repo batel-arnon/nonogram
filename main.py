@@ -90,20 +90,10 @@ def getInput4():
     b.setNumbers(False, [2,1,5,3,7])
     b.setNumbers(False, [6,3,4,1,4])
 
-    b.print()
-    b.drawBoard()
-    b.fillBoard()
-    b.drawBoard()
-    # b.fillBoard()
-    # b.drawBoard()
-    # b.fillBoard()
-    # b.drawBoard()
-    # b.fillBoard()
-    # b.drawBoard()
-    # b.fillBoard()
-    # b.drawBoard()
-    # b.fillBoard()
-    # b.drawBoard()
+    b.print_whats_we_have()
+    b.draw_board()
+    b.fill_board()
+    b.draw_board()
 
 def getInput2():
     b = Board(10,10)
@@ -129,10 +119,10 @@ def getInput2():
     b.setNumbers(False,[3,1])
     b.setNumbers(False,[1])
 
-    b.print()
-    b.drawBoard()
-    b.fillBoard()
-    b.drawBoard()
+    b.print_whats_we_have()
+    b.draw_board()
+    b.fill_board()
+    b.draw_board()
 
 def getInput3():
     b = Board(5,5)
@@ -148,10 +138,10 @@ def getInput3():
     b.setNumbers(False, [1,1])
     b.setNumbers(False, [5])
 
-    b.print()
-    b.drawBoard()
-    b.fillBoard()
-    b.drawBoard()
+    b.print_whats_we_have()
+    b.draw_board()
+    b.fill_board()
+    b.draw_board()
 # Press the green button in the gutter to run the script.
 
 getInput2()

@@ -13,7 +13,7 @@ class Board:
                 lines.append(0)
             self.allBoard.append(lines)
 
-    def setNumbers(self, is_row, arr):
+    def set_numbers(self, is_row, arr):
         if (is_row):
             self.lines.append(arr)
         else:
@@ -22,7 +22,7 @@ class Board:
         print(self.wid, self.hig)
         print(self.lines)
         print(self.colums)
-    def drawBoard(self):
+    def draw_board(self):
         for j in range(self.hig):
             for i in range(self.wid):
                 if self.allBoard[j][i] == -1:
