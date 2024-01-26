@@ -25,8 +25,8 @@ def get_input():
             number = int(input("enter numbers  that describes the line, when done enter 999: "))
         b.set_numbers(False, arr)
     b.print_whats_we_have()
-    b.draw_board()
-    b.fill_board()
+    #b.draw_board()
+    #b.fill_board()
     b.draw_board()
 def get_input4():
     b=Board(45,35)
