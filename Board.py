@@ -28,7 +28,7 @@ class Board:
                 if self.allBoard[j][i] == -1:
                     print(" ", end="")
                 elif self.allBoard[j][i] == 1:
-                    print("$", end="")
+                    print((chr(0x2B1B)), end="")
                 else:
                     print("?", end="")
             print()
