@@ -1,4 +1,3 @@
-import numpy as np
 
 class Line:
     def __init__(self, content,numbers,columns_number,row_number):
